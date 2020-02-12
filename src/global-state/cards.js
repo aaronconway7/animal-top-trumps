@@ -3,7 +3,9 @@ import uuid from 'uuid/v4'
 
 import { DEFAULT_CARDS } from '../constants/data'
 
-export const CardsContext = createContext()
+export const CardsContext = createContext({
+    cards: DEFAULT_CARDS
+})
 
 export const CardsProvider = props => {
     const [cards, setCards] = useState(DEFAULT_CARDS)
