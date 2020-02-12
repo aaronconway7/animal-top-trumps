@@ -8,7 +8,7 @@ import { StyledCard } from '../constants/styles'
 const Card = ({ data: card }) => {
     const { removeCard, setEditingCard } = useContext(CardsContext)
     return (
-    <StyledCard>
+    <StyledCard className={`card`}>
         {card.extinct && <span className={`extinct-status`}>extinct</span>}
         <div>
             <h3 className={`name`}>{card.name}</h3>
@@ -18,8 +18,8 @@ const Card = ({ data: card }) => {
             {card.carnivore ? `Carnivore` : `Herbivore`}
         </span>
         <div className={`buttons`}>
-            <button onClick={() => removeCard(card.id)}><span role={`img`} aria-label={`Remove`}>🗑️</span></button>
-            <button onClick={() => setEditingCard(card.id)}><span role={`img`} aria-label={`Edit`}>✏️</span></button>
+            <button className={`remove-card`} onClick={() => removeCard(card.id)}><span role={`img`} aria-label={`Remove`}>🗑️</span></button>
+            <button className={`edit-card`} onClick={() => setEditingCard(card.id)}><span role={`img`} aria-label={`Edit`}>✏️</span></button>
         </div>
     </StyledCard>
     )

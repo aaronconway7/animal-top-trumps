@@ -60,7 +60,7 @@ const EditCard = ({ data = DEFAULT_CARD, editing = false }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={`edit-card-form`}>
             <StyledEditCard editing={editing}>
                 <div className={`form-group`}>
                     <label htmlFor={`edit-card-name`}>Name</label>
@@ -85,7 +85,7 @@ const EditCard = ({ data = DEFAULT_CARD, editing = false }) => {
                     <input type={`checkbox`} id={`edit-card-extinct`} name={`extinct`} checked={card.extinct} onChange={handleChange} />
                 </div>
                 <div className={`buttons`}>
-                    <button type={`submit`}>{editing ? <span role={`img`} aria-label={`Save`}>💾</span> : <span role={`img`} aria-label={`Add`}>➕</span>}</button>
+                    <button type={`submit`} className={`submit-btn`}>{editing ? <span role={`img`} aria-label={`Save`}>💾</span> : <span role={`img`} aria-label={`Add`}>➕</span>}</button>
                 </div>
             </StyledEditCard>
         </form>
