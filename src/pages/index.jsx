@@ -45,7 +45,7 @@ const IndexPage = () => {
 
     return (
         <StyledIndexPage>
-            <h1 className={`title`}>Animal Top Trumps 📇</h1>
+            <h1 className={`title`}>Animal Top Trumps <span role={`img`} aria-label={`Cards`}>📇</span></h1>
             <div className={`cards`}>
                 {cards.map(card =>
                     editingCard === card.id ? (

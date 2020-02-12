@@ -68,7 +68,7 @@ const EditCard = ({ data = DEFAULT_CARD, editing = false }) => {
                 </div>
                 <div className={`form-group`}>
                     <label htmlFor={`edit-card-type`}>Type</label>
-                    <select name={`type`} id={`edit-card-type`} defaultValue={card.type} onChange={handleChange} required>
+                    <select name={`type`} id={`edit-card-type`} defaultValue={card.type} onBlur={handleChange} required>
                         <option value={``} disabled>Select...</option>
                         <option value={`mammal`}>mammal</option>
                         <option value={`reptile`}>reptile</option>
@@ -85,7 +85,7 @@ const EditCard = ({ data = DEFAULT_CARD, editing = false }) => {
                     <input type={`checkbox`} id={`edit-card-extinct`} name={`extinct`} checked={card.extinct} onChange={handleChange} />
                 </div>
                 <div className={`buttons`}>
-                    <button type={`submit`}>{editing ? `💾` : `➕`}</button>
+                    <button type={`submit`}>{editing ? <span role={`img`} aria-label={`Save`}>💾</span> : <span role={`img`} aria-label={`Add`}>➕</span>}</button>
                 </div>
             </StyledEditCard>
         </form>

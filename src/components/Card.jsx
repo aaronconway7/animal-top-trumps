@@ -18,8 +18,8 @@ const Card = ({ data: card }) => {
             {card.carnivore ? `Carnivore` : `Herbivore`}
         </span>
         <div className={`buttons`}>
-            <button onClick={() => removeCard(card.id)}>🗑️</button>
-            <button onClick={() => setEditingCard(card.id)}>✏️</button>
+            <button onClick={() => removeCard(card.id)}><span role={`img`} aria-label={`Remove`}>🗑️</span></button>
+            <button onClick={() => setEditingCard(card.id)}><span role={`img`} aria-label={`Edit`}>✏️</span></button>
         </div>
     </StyledCard>
     )

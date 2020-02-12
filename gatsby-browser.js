@@ -41,7 +41,7 @@ export const wrapRootElement = ({ element }) => {
     return (
         <ContextProvider>
             <Helmet>
-                <title>Animal Top Trumps 📇</title>
+                <title>Animal Top Trumps</title>
             </Helmet>
             <GlobalStyle />
             {element}
