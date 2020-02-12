@@ -41,7 +41,7 @@ const StyledIndexPage = styled.div`
 `
 
 const IndexPage = () => {
-    const { cards, editingCard } = useContext(CardsContext)
+    const { cards = [], editingCard } = useContext(CardsContext)
 
     return (
         <StyledIndexPage>
